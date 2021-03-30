@@ -1,0 +1,139 @@
+@font-face {
+    font-family: web; 
+    src: url(ValorantFont.ttf)
+}
+
+* {
+    font-family: web;
+}
+
+html {
+    background-color: rgba(239, 239, 239, 1);
+    text-decoration: none;
+    margin: 0px;
+    
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr;
+    margin: 0px;
+}
+
+/////////////////////////////
+
+nav {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.41fr 0.09fr;
+    grid-column: 1/5;
+    height: 100px;
+    text-align: center;
+    margin: 0px;
+}
+
+.links {
+    grid-column: 3/4;
+    display: flex;
+}
+
+nav img {
+    height: 90px;
+    width: 270px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: auto;
+    display: block;
+    font-size: 50px;
+}
+
+nav a:hover {
+    color: gold;
+    text-decoration: underline;
+}
+
+/////////////////////////////
+
+section {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: white;
+}
+
+.sec1 {
+    background-color: rgba(239, 239, 239, 1);
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1.6fr 1.4fr;
+    margin: 37px;
+}
+
+.sec1text {
+    grid-gap: 20px;
+    grid-column: 1/2;
+    display: grid;
+    grid-row: 0.1fr 1fr 0.05fr;
+    margin: 40px;
+    border-right: black;
+}
+
+.slide_div {
+    margin: 30px;
+    display: grid;
+    grid-column: 2/3;
+    background-color: white;
+}
+
+/////////////////////////////
+
+.about_home {
+    font-size: 20px;
+}
+
+.about_home_title {
+    font-size: 30px;
+}
+
+.aboutButton {
+    width: 110px;
+    height: 20px;
+    background-color: black;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.aboutButton:hover {
+    color: black;
+    background-color: white;
+}
+
+/////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
