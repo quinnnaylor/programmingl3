@@ -1,3 +1,5 @@
+//the products 
+
 var products = [
         ['products/africasWaterSupply.png', 29.99, 'Product 1 '],
         ['products/america.png', 29.99, 'Product 2 '],
@@ -19,9 +21,10 @@ var products = [
 
 var kartitems = [];
 
+//putting all the stuff in seperate boxes from array 
+
 function run() {
 
-    //        alert('testing'); 
     var main = document.getElementById('products');
 
     for (var i = 0; i < products.length; i++) {
@@ -43,7 +46,10 @@ function run() {
         price.innerHTML = '$' + products[i][1];
         desc.innerHTML = products[i][2];
         add.innerHTML = 'add';
+
         typeBox.type = 'number';
+        typeBox.min = '1';
+        typeBox.max = '5';
 
         typeBox.setAttribute("id", "input" + i);
         typeBox.value = 1;
@@ -52,18 +58,27 @@ function run() {
         add.addEventListener('click', adding, false);
     }
 
+    //        if (typeBox.value <= 0) {
+    //            typeBox.value = 1;
+    //            console.log('yes');
+    //        }
 
 }
-    function adding(event) {
-        const NUM = event.currentTarget.dataset.kartindex;
 
-        kartitems.push([products[NUM]]);
-        kartitems[kartitems.length - 1][1] = Number(document.getElementById('input' + NUM).value);
+//pushing into the kart array
 
-        updatekart();
-    }
+function adding(event) {
+    const NUM = event.currentTarget.dataset.kartindex;
 
-    var totalitems = 0;
+    kartitems.push([products[NUM]]);
+    kartitems[kartitems.length - 1][1] = Number(document.getElementById('input' + NUM).value);
+
+    updatekart();
+}
+
+var totalitems = 0;
+
+//saving data 
 
 function updatekart() {
     var itemcount = document.getElementById('itemcount');
@@ -78,6 +93,8 @@ function updatekart() {
 
     itemcount.innerHTML = totalitems;
 }
+
+//getting data from array and putting on page in seperate boxes from original array
 
 function loadkart() {
     //        alert('testing'); 
@@ -118,7 +135,9 @@ function loadkart() {
         amount.innerHTML = 'items ordered : ' + kartitems[i][1];
         subtotal.innerHTML = '$' + kartitems[i][1] * kartitems[i][0][1];
     }
-    
+
+    //delete button
+
     function deleteme() {
         const NUM = event.currentTarget.dataset.kartindex;
 
@@ -130,6 +149,5 @@ function loadkart() {
         loadkart();
         window.location.reload(true);
     }
-    
-}
 
+}
